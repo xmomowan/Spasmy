@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9432856220C2664B00E181F7 /* Twitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432856120C2664B00E181F7 /* Twitchy.framework */; };
+		9432856420C2665100E181F7 /* Twitchy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9432856120C2664B00E181F7 /* Twitchy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9432856720C2670500E181F7 /* mpv in Resources */ = {isa = PBXBuildFile; fileRef = 9432856620C2670500E181F7 /* mpv */; };
+		9432857220C2CA6900E181F7 /* libmpv.1.26.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432857120C2CA6900E181F7 /* libmpv.1.26.0.dylib */; };
+		9432857520C2D10E00E181F7 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432857320C2D10E00E181F7 /* VideoView.swift */; };
+		9432857620C2D10E00E181F7 /* ViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432857420C2D10E00E181F7 /* ViewLayer.swift */; };
+		9432857920C2DEF300E181F7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432857720C2DEF300E181F7 /* Test.swift */; };
+		9432857A20C2DEF300E181F7 /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9432857820C2DEF300E181F7 /* Test.xib */; };
+		94E544EB20BD707400445E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E544EA20BD707400445E0F /* AppDelegate.swift */; };
+		94E544ED20BD707600445E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E544EC20BD707600445E0F /* Assets.xcassets */; };
+		94E544F020BD707600445E0F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E544EE20BD707600445E0F /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94E5450120BD7C9E00445E0F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9432856420C2665100E181F7 /* Twitchy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9432856120C2664B00E181F7 /* Twitchy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitchy.framework; path = Carthage/Build/Mac/Twitchy.framework; sourceTree = "<group>"; };
+		9432856620C2670500E181F7 /* mpv */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mpv; sourceTree = "<group>"; };
+		9432856D20C2693400E181F7 /* Twift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twift-Bridging-Header.h"; sourceTree = "<group>"; };
+		9432857120C2CA6900E181F7 /* libmpv.1.26.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmpv.1.26.0.dylib; sourceTree = "<group>"; };
+		9432857320C2D10E00E181F7 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		9432857420C2D10E00E181F7 /* ViewLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLayer.swift; sourceTree = "<group>"; };
+		9432857720C2DEF300E181F7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		9432857820C2DEF300E181F7 /* Test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
+		94E544E720BD707400445E0F /* Twift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E544EA20BD707400445E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94E544EC20BD707600445E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94E544EF20BD707600445E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		94E544F120BD707600445E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E544F220BD707600445E0F /* Twift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Twift.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94E544E420BD707400445E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9432857220C2CA6900E181F7 /* libmpv.1.26.0.dylib in Frameworks */,
+				9432856220C2664B00E181F7 /* Twitchy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9432856520C266EC00E181F7 /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				9432857020C26C1C00E181F7 /* lib */,
+				9432856F20C26BE100E181F7 /* include */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		9432856820C267C200E181F7 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				94E544EC20BD707600445E0F /* Assets.xcassets */,
+				94E544EE20BD707600445E0F /* MainMenu.xib */,
+				94E544F120BD707600445E0F /* Info.plist */,
+				94E544F220BD707600445E0F /* Twift.entitlements */,
+				9432856D20C2693400E181F7 /* Twift-Bridging-Header.h */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		9432856F20C26BE100E181F7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9432856620C2670500E181F7 /* mpv */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		9432857020C26C1C00E181F7 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9432857120C2CA6900E181F7 /* libmpv.1.26.0.dylib */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		94E544DE20BD707400445E0F = {
+			isa = PBXGroup;
+			children = (
+				9432856520C266EC00E181F7 /* deps */,
+				94E544E920BD707400445E0F /* Twift */,
+				94E544E820BD707400445E0F /* Products */,
+				94E544FB20BD7C9300445E0F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		94E544E820BD707400445E0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94E544E720BD707400445E0F /* Twift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94E544E920BD707400445E0F /* Twift */ = {
+			isa = PBXGroup;
+			children = (
+				94E544EA20BD707400445E0F /* AppDelegate.swift */,
+				9432857320C2D10E00E181F7 /* VideoView.swift */,
+				9432857420C2D10E00E181F7 /* ViewLayer.swift */,
+				9432857720C2DEF300E181F7 /* Test.swift */,
+				9432857820C2DEF300E181F7 /* Test.xib */,
+				9432856820C267C200E181F7 /* support */,
+			);
+			path = Twift;
+			sourceTree = "<group>";
+		};
+		94E544FB20BD7C9300445E0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9432856120C2664B00E181F7 /* Twitchy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94E544E620BD707400445E0F /* Twift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E544F520BD707600445E0F /* Build configuration list for PBXNativeTarget "Twift" */;
+			buildPhases = (
+				94E544E520BD707400445E0F /* Resources */,
+				94E544E320BD707400445E0F /* Sources */,
+				94E544E420BD707400445E0F /* Frameworks */,
+				94E5450120BD7C9E00445E0F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twift;
+			productName = Twift;
+			productReference = 94E544E720BD707400445E0F /* Twift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94E544DF20BD707400445E0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Ryan Liang";
+				TargetAttributes = {
+					94E544E620BD707400445E0F = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 94E544E220BD707400445E0F /* Build configuration list for PBXProject "Twift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94E544DE20BD707400445E0F;
+			productRefGroup = 94E544E820BD707400445E0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94E544E620BD707400445E0F /* Twift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94E544E520BD707400445E0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9432856720C2670500E181F7 /* mpv in Resources */,
+				9432857A20C2DEF300E181F7 /* Test.xib in Resources */,
+				94E544ED20BD707600445E0F /* Assets.xcassets in Resources */,
+				94E544F020BD707600445E0F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94E544E320BD707400445E0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9432857520C2D10E00E181F7 /* VideoView.swift in Sources */,
+				9432857920C2DEF300E181F7 /* Test.swift in Sources */,
+				94E544EB20BD707400445E0F /* AppDelegate.swift in Sources */,
+				9432857620C2D10E00E181F7 /* ViewLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94E544EE20BD707600445E0F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94E544EF20BD707600445E0F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94E544F320BD707600445E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94E544F420BD707600445E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		94E544F620BD707600445E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3M8F2BBT82;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/deps/include";
+				INFOPLIST_FILE = Twift/support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/deps/lib",
+					"$(PROJECT_DIR)/deps/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ryanliang.Twift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twift/support/Twift-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		94E544F720BD707600445E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3M8F2BBT82;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/deps/include";
+				INFOPLIST_FILE = Twift/support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/deps/lib",
+					"$(PROJECT_DIR)/deps/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ryanliang.Twift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twift/support/Twift-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94E544E220BD707400445E0F /* Build configuration list for PBXProject "Twift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E544F320BD707600445E0F /* Debug */,
+				94E544F420BD707600445E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E544F520BD707600445E0F /* Build configuration list for PBXNativeTarget "Twift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E544F620BD707600445E0F /* Debug */,
+				94E544F720BD707600445E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94E544DF20BD707400445E0F /* Project object */;
+}
