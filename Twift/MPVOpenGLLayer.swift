@@ -9,39 +9,47 @@ import QuartzCore
 import OpenGL.GL
 import OpenGL.GL3
 
-class MPVOpenGLLayer: NSOpenGLLayer {
+class MPVOpenGLLayer: CAOpenGLLayer {
 
     /// mpv handle, do not initialize OpenGL before passing in
-    var mpvgl: OpaquePointer?
-    
+    var mpvgl: OpaquePointer? {
+        didSet {
+            self.initializeMPVOpenGL()
+        }
+    }
+
+    /// A queue to update our layer asynchronously
     var mpvglQueue = DispatchQueue(label: "io.ryanliang.twift.mpvopengl", qos: .userInteractive)
 
-    func mpvInitOpenGLState(mpvgl: OpaquePointer?) {
+    private func initializeMPVOpenGL() {
 
-        // @todo: move Unmanaged things to a standalone file
+        // update self once, or mpv would be unhappy during OpenGL initialization
         self.update()
-        self.mpvgl = mpvgl
-        /// set up opengl
+
+        /// set up OpenGL
         mpv_opengl_cb_init_gl(mpvgl, nil, mpvGetOpenGLFunctionPointer, nil)
 
         // set up update callback
+        // @todo: move Unmanaged things to a standalone file
         mpv_opengl_cb_set_update_callback(mpvgl, mpvUpdate, UnsafeMutableRawPointer(Unmanaged<MPVOpenGLLayer>.passUnretained(self).toOpaque()))
     }
 
-    override func openGLContext(for pixelFormat: NSOpenGLPixelFormat) -> NSOpenGLContext {
-        let ctx = super.openGLContext(for: pixelFormat)
+    override func copyCGLContext(forPixelFormat pf: CGLPixelFormatObj) -> CGLContextObj {
+        let ctx = super.copyCGLContext(forPixelFormat: pf)
 
-        CGLSetCurrentContext(ctx.cglContextObj)
+        CGLSetCurrentContext(ctx)
         return ctx
     }
 
-    override func canDraw(in context: NSOpenGLContext, pixelFormat: NSOpenGLPixelFormat, forLayerTime t: CFTimeInterval, displayTime ts: UnsafePointer<CVTimeStamp>) -> Bool {
+    override func canDraw(inCGLContext ctx: CGLContextObj, pixelFormat pf: CGLPixelFormatObj, forLayerTime t: CFTimeInterval, displayTime ts: UnsafePointer<CVTimeStamp>?) -> Bool {
         return true
     }
 
-    override func draw(in context: NSOpenGLContext, pixelFormat: NSOpenGLPixelFormat, forLayerTime t: CFTimeInterval, displayTime ts: UnsafePointer<CVTimeStamp>) {
+    override func draw(inCGLContext ctx: CGLContextObj, pixelFormat pf: CGLPixelFormatObj, forLayerTime t: CFTimeInterval, displayTime ts: UnsafePointer<CVTimeStamp>?) {
 
-        glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
+        // when updating for the first time after setting mpvgl, the mpvgl is not
+        // yet initialized by init_gl, and the draw would fail because of an assertion of ctx->renderer
+        // so we only try drawing after that.
         if let mpvgl = mpvgl {
 
             // get currently bound fbo
@@ -57,18 +65,21 @@ class MPVOpenGLLayer: NSOpenGLLayer {
             getGLError()
         } else {
 
+            // clear to black
             glClearColor(0, 0, 0, 1)
             glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
         }
+
         glFlush()
     }
 
     func update() {
 
+        // https://stackoverflow.com/questions/7610117
         super.display()
         CATransaction.flush()
     }
-
+    
     override func display() {
         update()
     }
@@ -107,7 +118,7 @@ class MPVOpenGLLayer: NSOpenGLLayer {
     }
 }
 
-/// Helper to get opengl functions, passed into mpv in mpv_opengl_cb_init_gl
+/// Helper to get OpenGL functions, passed into mpv in mpv_opengl_cb_init_gl
 fileprivate func mpvGetOpenGLFunctionPointer(_ ctx: UnsafeMutableRawPointer?, _ name: UnsafePointer<CChar>?) -> UnsafeMutableRawPointer? {
     let symbol: CFString = CFStringCreateWithCString(kCFAllocatorDefault, name, kCFStringEncodingASCII);
     guard let pointer = CFBundleGetFunctionPointerForName(CFBundleGetBundleWithIdentifier(CFStringCreateCopy(kCFAllocatorDefault, "com.apple.opengl" as CFString)), symbol) else {
@@ -125,6 +136,7 @@ fileprivate func mpvUpdate(_ ctx: UnsafeMutableRawPointer?) {
         fatalError("Update callback called without a context.")
     }
 
+    // cast pointer back to the layer
     let layer = Unmanaged<MPVOpenGLLayer>.fromOpaque(ctx).takeUnretainedValue()
     layer.mpvglQueue.async {
         layer.update()
