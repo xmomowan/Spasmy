@@ -8,15 +8,27 @@ import AppKit
 
 class MPVOpenGLView: NSView {
 
-    var mpvgl: OpaquePointer?
+    /// mpv handler
+    private var mpvgl: OpaquePointer?
+
+    /// mpv OpenGL layer
+    private let mpvlayer: MPVOpenGLLayer
 
     override init(frame: CGRect) {
 
-        self.mpvgl = nil
-        super.init(frame: frame)
+        let layer = MPVOpenGLLayer()
+        self.mpvlayer = layer
 
-        self.layer = MPVOpenGLLayer()
+        super.init(frame: frame)
+        self.layer = layer
         self.wantsLayer = true
+    }
+
+    /// MUST call this AFTER add the view as some other view's subview
+    func initializeAsSubview(mpvgl: OpaquePointer) {
+
+        self.mpvgl = mpvgl
+        self.mpvlayer.mpvgl = mpvgl
     }
 
     required init?(coder decoder: NSCoder) {

@@ -11,8 +11,16 @@ import OpenGL.GL3
 
 class MPVOpenGLLayer: CAOpenGLLayer {
 
+    // MARK: Fields
+
     /// mpv handle, do not initialize OpenGL before passing in
     var mpvgl: OpaquePointer? {
+
+        // update self once before assigning, or mpv would be unhappy during OpenGL initialization
+        willSet {
+            self.update()
+        }
+
         didSet {
             self.initializeMPVOpenGL()
         }
@@ -22,10 +30,7 @@ class MPVOpenGLLayer: CAOpenGLLayer {
     var mpvglQueue = DispatchQueue(label: "io.ryanliang.twift.mpvopengl", qos: .userInteractive)
 
     private func initializeMPVOpenGL() {
-
-        // update self once, or mpv would be unhappy during OpenGL initialization
-        self.update()
-
+        
         /// set up OpenGL
         mpv_opengl_cb_init_gl(mpvgl, nil, mpvGetOpenGLFunctionPointer, nil)
 
@@ -33,6 +38,8 @@ class MPVOpenGLLayer: CAOpenGLLayer {
         // @todo: move Unmanaged things to a standalone file
         mpv_opengl_cb_set_update_callback(mpvgl, mpvUpdate, UnsafeMutableRawPointer(Unmanaged<MPVOpenGLLayer>.passUnretained(self).toOpaque()))
     }
+
+    // MARK: Draw
 
     override func copyCGLContext(forPixelFormat pf: CGLPixelFormatObj) -> CGLContextObj {
         let ctx = super.copyCGLContext(forPixelFormat: pf)
@@ -117,6 +124,8 @@ class MPVOpenGLLayer: CAOpenGLLayer {
         }
     }
 }
+
+// MARK: MPV Callbacks
 
 /// Helper to get OpenGL functions, passed into mpv in mpv_opengl_cb_init_gl
 fileprivate func mpvGetOpenGLFunctionPointer(_ ctx: UnsafeMutableRawPointer?, _ name: UnsafePointer<CChar>?) -> UnsafeMutableRawPointer? {
