@@ -66,7 +66,7 @@ class MPVOpenGLLayer: CAOpenGLLayer {
             // get viewport size
             var viewport: [GLint] = [0, 0, 0, 0]
             glGetIntegerv(GLenum(GL_VIEWPORT), &viewport);
-
+	
             // draw!
             mpv_opengl_cb_draw(mpvgl, fbo, viewport[2], -viewport[3])
             getGLError()
