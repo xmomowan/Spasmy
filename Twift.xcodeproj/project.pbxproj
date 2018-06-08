@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A4B4209EABF32CC1FA6648 /* TwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BCAE070AA2FB24D6BEB5 /* TwiftError.swift */; };
+		35A4B8EA29B4192D537D4519 /* MPVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B1DBFEBF20E2D81A367F /* MPVController.swift */; };
+		35A4BE72F485A6E50DF4E55D /* MPVOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BB1A3249F45CDB7E4878 /* MPVOpenGLView.swift */; };
+		35A4BF9F9FF8D9A1BFBD6642 /* MPVOpenGLLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B4DC161EBA987E9C8565 /* MPVOpenGLLayer.swift */; };
+		9429A2DD20C8F6AE003E1B47 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429A2DB20C8F6AE003E1B47 /* Player.swift */; };
+		9429A2E920CA2FA6003E1B47 /* StreamWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429A2E720CA2FA6003E1B47 /* StreamWindowController.swift */; };
+		9429A2EA20CA2FA6003E1B47 /* StreamWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429A2E820CA2FA6003E1B47 /* StreamWindowController.xib */; };
+		9429A2ED20CA379D003E1B47 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429A2EB20CA379D003E1B47 /* MainWindowController.swift */; };
+		9429A2EE20CA379D003E1B47 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429A2EC20CA379D003E1B47 /* MainWindowController.xib */; };
 		9432856220C2664B00E181F7 /* Twitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432856120C2664B00E181F7 /* Twitchy.framework */; };
 		9432856420C2665100E181F7 /* Twitchy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9432856120C2664B00E181F7 /* Twitchy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9432856720C2670500E181F7 /* mpv in Resources */ = {isa = PBXBuildFile; fileRef = 9432856620C2670500E181F7 /* mpv */; };
 		9432857220C2CA6900E181F7 /* libmpv.1.26.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432857120C2CA6900E181F7 /* libmpv.1.26.0.dylib */; };
-		9432857520C2D10E00E181F7 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432857320C2D10E00E181F7 /* VideoView.swift */; };
-		9432857620C2D10E00E181F7 /* ViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432857420C2D10E00E181F7 /* ViewLayer.swift */; };
-		9432857920C2DEF300E181F7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432857720C2DEF300E181F7 /* Test.swift */; };
-		9432857A20C2DEF300E181F7 /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9432857820C2DEF300E181F7 /* Test.xib */; };
+		9432858020C7A8E100E181F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432857F20C7A8E100E181F7 /* QuartzCore.framework */; };
 		94E544EB20BD707400445E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E544EA20BD707400445E0F /* AppDelegate.swift */; };
 		94E544ED20BD707600445E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E544EC20BD707600445E0F /* Assets.xcassets */; };
 		94E544F020BD707600445E0F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E544EE20BD707600445E0F /* MainMenu.xib */; };
@@ -35,14 +41,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		35A4B1DBFEBF20E2D81A367F /* MPVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPVController.swift; sourceTree = "<group>"; };
+		35A4B4DC161EBA987E9C8565 /* MPVOpenGLLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPVOpenGLLayer.swift; sourceTree = "<group>"; };
+		35A4BB1A3249F45CDB7E4878 /* MPVOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPVOpenGLView.swift; sourceTree = "<group>"; };
+		35A4BCAE070AA2FB24D6BEB5 /* TwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwiftError.swift; sourceTree = "<group>"; };
+		9429A2DB20C8F6AE003E1B47 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9429A2E720CA2FA6003E1B47 /* StreamWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamWindowController.swift; sourceTree = "<group>"; };
+		9429A2E820CA2FA6003E1B47 /* StreamWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamWindowController.xib; sourceTree = "<group>"; };
+		9429A2EB20CA379D003E1B47 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		9429A2EC20CA379D003E1B47 /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		9432856120C2664B00E181F7 /* Twitchy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitchy.framework; path = Carthage/Build/Mac/Twitchy.framework; sourceTree = "<group>"; };
 		9432856620C2670500E181F7 /* mpv */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mpv; sourceTree = "<group>"; };
 		9432856D20C2693400E181F7 /* Twift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9432857120C2CA6900E181F7 /* libmpv.1.26.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmpv.1.26.0.dylib; sourceTree = "<group>"; };
-		9432857320C2D10E00E181F7 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		9432857420C2D10E00E181F7 /* ViewLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLayer.swift; sourceTree = "<group>"; };
-		9432857720C2DEF300E181F7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		9432857820C2DEF300E181F7 /* Test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
+		9432857F20C7A8E100E181F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		94E544E720BD707400445E0F /* Twift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E544EA20BD707400445E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E544EC20BD707600445E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9432858020C7A8E100E181F7 /* QuartzCore.framework in Frameworks */,
 				9432857220C2CA6900E181F7 /* libmpv.1.26.0.dylib in Frameworks */,
 				9432856220C2664B00E181F7 /* Twitchy.framework in Frameworks */,
 			);
@@ -64,6 +77,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9429A2D420C8F4DB003E1B47 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				35A4B4DC161EBA987E9C8565 /* MPVOpenGLLayer.swift */,
+				35A4BB1A3249F45CDB7E4878 /* MPVOpenGLView.swift */,
+				35A4B1DBFEBF20E2D81A367F /* MPVController.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		9429A2D520C8F4EE003E1B47 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				9429A2E720CA2FA6003E1B47 /* StreamWindowController.swift */,
+				9429A2E820CA2FA6003E1B47 /* StreamWindowController.xib */,
+				9429A2EB20CA379D003E1B47 /* MainWindowController.swift */,
+				9429A2EC20CA379D003E1B47 /* MainWindowController.xib */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		9429A2DA20C8F698003E1B47 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				9429A2DB20C8F6AE003E1B47 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		9432856520C266EC00E181F7 /* deps */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +164,12 @@
 		94E544E920BD707400445E0F /* Twift */ = {
 			isa = PBXGroup;
 			children = (
+				9429A2D420C8F4DB003E1B47 /* Video */,
+				9429A2DA20C8F698003E1B47 /* Player */,
+				9429A2D520C8F4EE003E1B47 /* Windows */,
 				94E544EA20BD707400445E0F /* AppDelegate.swift */,
-				9432857320C2D10E00E181F7 /* VideoView.swift */,
-				9432857420C2D10E00E181F7 /* ViewLayer.swift */,
-				9432857720C2DEF300E181F7 /* Test.swift */,
-				9432857820C2DEF300E181F7 /* Test.xib */,
 				9432856820C267C200E181F7 /* support */,
+				35A4BCAE070AA2FB24D6BEB5 /* TwiftError.swift */,
 			);
 			path = Twift;
 			sourceTree = "<group>";
@@ -135,6 +177,7 @@
 		94E544FB20BD7C9300445E0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9432857F20C7A8E100E181F7 /* QuartzCore.framework */,
 				9432856120C2664B00E181F7 /* Twitchy.framework */,
 			);
 			name = Frameworks;
@@ -199,9 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9429A2EE20CA379D003E1B47 /* MainWindowController.xib in Resources */,
 				9432856720C2670500E181F7 /* mpv in Resources */,
-				9432857A20C2DEF300E181F7 /* Test.xib in Resources */,
 				94E544ED20BD707600445E0F /* Assets.xcassets in Resources */,
+				9429A2EA20CA2FA6003E1B47 /* StreamWindowController.xib in Resources */,
 				94E544F020BD707600445E0F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,10 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9432857520C2D10E00E181F7 /* VideoView.swift in Sources */,
-				9432857920C2DEF300E181F7 /* Test.swift in Sources */,
 				94E544EB20BD707400445E0F /* AppDelegate.swift in Sources */,
-				9432857620C2D10E00E181F7 /* ViewLayer.swift in Sources */,
+				9429A2E920CA2FA6003E1B47 /* StreamWindowController.swift in Sources */,
+				9429A2ED20CA379D003E1B47 /* MainWindowController.swift in Sources */,
+				35A4BF9F9FF8D9A1BFBD6642 /* MPVOpenGLLayer.swift in Sources */,
+				9429A2DD20C8F6AE003E1B47 /* Player.swift in Sources */,
+				35A4BE72F485A6E50DF4E55D /* MPVOpenGLView.swift in Sources */,
+				35A4B8EA29B4192D537D4519 /* MPVController.swift in Sources */,
+				35A4B4209EABF32CC1FA6648 /* TwiftError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +416,7 @@
 					"$(SRCROOT)/deps/lib",
 					"$(PROJECT_DIR)/deps/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ryanliang.Twift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Twift/support/Twift-Bridging-Header.h";
@@ -397,7 +445,7 @@
 					"$(SRCROOT)/deps/lib",
 					"$(PROJECT_DIR)/deps/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ryanliang.Twift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Twift/support/Twift-Bridging-Header.h";

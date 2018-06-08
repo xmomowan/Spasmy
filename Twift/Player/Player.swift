@@ -13,36 +13,32 @@ import Cocoa
 /// another one if you are watching multiple videos
 class Player {
 
-    var mpv_handle: OpaquePointer?
-    var mpv_gl: OpaquePointer?
+    let mpv: MPVController
 
     init() {
 
-        self.mpv_handle = mpv_create()
-        mpv_initialize(self.mpv_handle)
-        self.mpv_gl = OpaquePointer(mpv_get_sub_api(mpv_handle, MPV_SUB_API_OPENGL_CB))
+        self.mpv = MPVController()
     }
 
-    func makePlayerView(asSubviewOf parent: NSView) -> NSView {
+    func mpvInitialize() throws {
 
-        guard let mpv_gl = mpv_gl else {
+        try mpv.initializeMpv()
+    }
 
-            // @todo: better error handling
-            fatalError("mpv OpenGL failed")
-        }
+    func makePlayerView(asLastSubviewOf parent: NSView) -> NSView {
 
         let view = MPVOpenGLView(frame: parent.frame)
-        parent.addSubview(view)
-        view.initializeAsSubview(mpvgl: mpv_gl)
+        parent.addSubview(view, positioned: .below, relativeTo: nil)
+        view.initializeAsSubview(mpvgl: self.mpv.mpv_gl)
         return view
     }
 
     deinit {
 
         // @todo: do we actually need this? Or do we use mpv_detach_destroy()?
-        if let mpv = mpv_handle {
-
-            mpv_terminate_destroy(mpv)
-        }
+//        if let mpv = mpv_handle {
+//
+//            mpv_terminate_destroy(mpv)
+//        }
     }
 }
