@@ -20,7 +20,6 @@ class StreamWindowController: NSWindowController {
 
         self.player = Player()
         super.init(window: nil)
-
     }
     
     required init?(coder: NSCoder) {
@@ -40,7 +39,12 @@ class StreamWindowController: NSWindowController {
 
         guard let wi = self.window else { return }
         guard let content = wi.contentView else { return }
-        let _ = self.player.makePlayerView(asLastSubviewOf: content)
+        let playView = self.player.makePlayerView(asLastSubviewOf: content)
+        playView.leftAnchor.constraint(equalTo: content.leftAnchor).isActive = true
+        playView.rightAnchor.constraint(equalTo: content.rightAnchor).isActive = true
+        playView.topAnchor.constraint(equalTo: content.topAnchor).isActive = true
+        playView.bottomAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
+        playView.translatesAutoresizingMaskIntoConstraints = false
     }
 
     static func open(url: String) {
